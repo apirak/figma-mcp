@@ -389,4 +389,135 @@ body {
   line-height: 1.6;
 }
 
+/* ===== Bottom Navigation (Mobile) ===== */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 2px solid #e5e7eb;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex: 1;
+  padding: 12px 8px;
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bottom-nav-item.active {
+  color: #2563eb;
+}
+
+.bottom-nav-item:hover {
+  background: #f9fafb;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  /* Show bottom nav, hide sidebar */
+  .bottom-nav {
+    display: flex;
+  }
+  
+  .sidebar {
+    display: none;
+  }
+
+  /* Adjust header for mobile */
+  .header {
+    justify-content: center;
+    padding: 0 16px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .header-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header-title {
+    font-size: 18px;
+  }
+
+  /* Adjust main content for bottom nav */
+  .main-content {
+    padding: 20px 16px 80px 16px;
+  }
+
+  /* Single column grid on mobile */
+  .course-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Adjust course card for mobile */
+  .course-card-media {
+    height: 180px;
+  }
+
+  .course-card-content {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .course-card-thumbnail {
+    width: 60px;
+    height: 90px;
+  }
+
+  .course-card-title {
+    font-size: 16px;
+  }
+
+  .course-card-description {
+    font-size: 14px;
+  }
+
+  /* Adjust course detail for mobile */
+  .course-detail-hero {
+    height: 250px;
+  }
+
+  .course-detail-title {
+    font-size: 24px;
+  }
+
+  .course-detail-section h2 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet layout */
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .main-content {
+    padding: 24px;
+  }
+}
+
+
 

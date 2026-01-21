@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import CourseCard from './components/CourseCard';
+import Sidebar from './components/Sidebar';import BottomNav from './components/BottomNav';import CourseCard from './components/CourseCard';
 import CourseDetail from './components/CourseDetail';
 import type { MenuItem } from './types';
 import { courses } from './data/courses';
@@ -44,6 +43,7 @@ function App() {
           )}
         </main>
       </div>
+      <BottomNav activeMenu={activeMenu} onMenuClick={setActiveMenu} />
     </div>
   );
 }
